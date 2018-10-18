@@ -5,13 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我的画板</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="//at.alicdn.com/t/font_878298_j9cazs8ngm.js"></script>
 </head>
 <body>
   <canvas id="xxx" width=300 height=300></canvas>
   <div id="action" class="action">
-     <button id="eraser">橡皮擦</button>
-      <button id="brush">画笔</button>
+      <svg id="pen" class="active icon" aria-hidden="true">
+          <use xlink:href="#icon-pen"></use>
+      </svg>
+      <svg id="eraser" class="icon" aria-hidden="true">
+          <use xlink:href="#icon-eraser"></use>
+      </svg>
+      <svg id="clear" class="icon" aria-hidden="true">
+          <use xlink:href="#icon-clear"></use>
+      </svg>
+      <svg id="save" class="icon" aria-hidden="true">
+          <use xlink:href="#icon-save"></use>
+      </svg>
   </div>
+  <ol class="color">
+    <li id="red" class="red"></li>
+    <li id="green" class="green"></li>
+    <li id="blue" class="blue"></li>
+  </ol>
+  <ol class="sizes">
+    <li id="thin" class="thin"></li>
+    <li id="thick" class="thick"></li>
+  </ol>
   <script src="./main.js"></script>
 </body>
 </html>

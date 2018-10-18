@@ -1,24 +1,80 @@
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+ol,ul{
+  list-style: none;
+}
 #xxx{
-    background: green;
+    background: white;
     display:block;
   }
   body{
-    margin: 0;
+    overflow: hidden;
   }
   .action{
     position: fixed;
     left: 0;
-    bottom: 0;
+    top: 0;
+    padding: 20px;
   }
-  
-  .action>#brush{
-    display: none;
+  .action svg{
+    width: 1.5em;
+    height: 1.5em;
+    transition: all 0.3s;
+    margin: 10px;
   }
-  
-  .action.x>#brush{
-    display: inline-block;
-  }
-  
-  .action.x>#eraser{
-    display: none;
-  }
+ .action svg.active{
+   fill:red;
+   transform: scale(1.2);
+ }
+ .color{
+   position: fixed;
+   top: 60px;
+   left: 28px;
+
+ }
+ .color li{
+   width: 20px;
+   height: 20px;
+   /* border: 1px solid grey; */
+   border-radius: 50%;
+   margin: 16px 0;
+   transition: all 0.3s;
+ }
+ .color li.red{
+   background: red;
+ }
+ .color li.green{
+  background: green;
+}
+.color li.blue{
+  background: blue;
+}
+.color li.active{
+  transform: scale(1.2);
+}
+.sizes{
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+.sizes .thin{
+  height: 0;
+  width: 40px;
+  border: 3px solid black;
+}
+.sizes .thick{
+  height: 0;
+  width: 40px;
+  border: 8px solid black;
+  margin-top: 20px;
+}
+
+
